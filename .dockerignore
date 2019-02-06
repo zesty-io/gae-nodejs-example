@@ -1,0 +1,13 @@
+## Do not exclude node_modules, otherwise docker COPY commands can not copy
+## @zesty-io packages into the container. Docker does not provide exclusion syntax
+#node_modules
+
+package-lock.json
+
+.dockerignore
+Dockerfile
+npm-debug.log
+yarn-error.log
+.git
+.hg
+.svn

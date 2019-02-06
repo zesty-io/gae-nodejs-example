@@ -1,0 +1,16 @@
+service: gae-nodejs-exmaple
+
+## We provide our own docker build so
+## have to run in custom
+runtime: custom
+env: flex
+
+network:
+  name: default
+
+automatic_scaling:
+  min_num_instances: 2
+  max_num_instances: 10
+  cool_down_period_sec: 180
+  cpu_utilization:
+    target_utilization: 0.8

@@ -1,0 +1,12 @@
+## @see https://realguess.net/2017/01/14/gitignore-excluding-everything-except-a-specific-directory/
+## "The directory github.com/ is excluded. Therefore, it is not possible to re-include a file github.com/realguess (directory is a file). To fix it, just need to add the wildcard to the end of the parent directory:"
+node_modules/*
+
+# Allow inclusion of private repos
+# This avoids passing github credentials around
+# since the local deploy user credentials are used
+!node_modules/@zesty-io/
+
+package-lock.json
+
+.git/
