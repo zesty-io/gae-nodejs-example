@@ -13,7 +13,7 @@ COPY src/ /app/src/
 # as well.
 # This command will also cat the npm-debug.log file after the
 # build, if it exists.
-RUN npm install --unsafe-perm || \
+RUN npm install --only=prod --unsafe-perm || \
   ((if [ -f npm-debug.log ]; then \
       cat npm-debug.log; \
     fi) && false)
