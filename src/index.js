@@ -12,11 +12,14 @@ app.options("*", cors());
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-  return res.send("ok");
+  return res.send(process.env.EXAMPLE_ENV_VAR);
 });
 
 app.get("/_ah/health", (req, res) => {
-  return res.send(process.env.EXAMPLE_ENV_VAR);
+  return res.send({
+    message: "healthy",
+    running: Date.now()
+  });
 });
 
 // Start Server
