@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/_ah/health", (req, res) => {
-  return res.send("ok");
+  return res.send(process.env.EXAMPLE_ENV_VAR);
 });
 
 // Start Server
