@@ -5,11 +5,10 @@
   "main": "src/index.js",
   "scripts": {
     "precommit": "pretty-quick --staged",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "build-dev": "npm install",
-    "build-stage": "npm install",
-    "build-prod": "npm install"
+    "build:dev": "npm install",
+    "build:stage": "npm install",
+    "build:prod": "npm install"
   },
   "repository": {
     "type": "git",
